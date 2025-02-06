@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question {{ index }} of {{ total }}</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Question {{ index }} of {{ total }}</h2>
+      <form method="post">
+        <div class="question-container">
+          <div class="question">{{ question['question'] }}</div>
+          <div class="options">
+            {% set labels = ['A', 'B', 'C', 'D'] %} {% for option in
+            question['options'] %}
+            <div class="option" onclick="selectOption({{ loop.index }})">
+              <input
+                type="radio"
+                id="option{{ loop.index }}"
+                name="answer"
+                value="{{ option }}"
+              />
+              <label for="option{{ loop.index }}">
+                {{ labels[loop.index0] }}. {{ option }}
+              </label>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <button type="submit">Next</button>
+      </form>
+    </div>
+    <script>
+      // JavaScript to select the radio button when the .option div is clicked
+      function selectOption(index) {
+        const radioButton = document.getElementById(`option${index}`);
+        radioButton.checked = true;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,250 @@
+[
+  {
+    "category": "A. radiokomunikační předpisy",
+    "questions": [
+      {
+        "question": "Zajištění účelného využívání rádiových kmitočtů a správu rádiového spektra vykonává",
+        "options": [
+          "Český telekomunikační úřad",
+          "Ministerstvo průmyslu",
+          "Rada ČTÚ"
+        ],
+        "answer": "Český telekomunikační úřad"
+      },
+      {
+        "question": "Radiokomunikační službou je komunikační činnost, která spočívá v přenosu, vysílání nebo příjmu signálů prostřednictvím",
+        "options": [
+          "optických vláken",
+          "rádiových vln",
+          "internetového spojení"
+        ],
+        "answer": "rádiových vln"
+      },
+      {
+        "question": "Plán přidělení kmitočtových pásem (národní kmitočtovou tabulku) stanoví",
+        "options": [
+          "Ministerstvo průmyslu a obchodu vyhláškou",
+          "Český telekomunikační úřad",
+          "Rada ČTÚ",
+          "Parlament ČR"
+        ],
+        "answer": "Ministerstvo průmyslu a obchodu vyhláškou"
+      },
+      {
+        "question": "Individuální oprávnění k vyžívání rádiových kmitočtů uděluje",
+        "options": [
+          "Ministerstvo průmyslu a obchodu",
+          "Český telekomunikační úřad",
+          "Mezinárodní telekomunikační unie",
+          "Rada ČTÚ"
+        ],
+        "answer": "Český telekomunikační úřad"
+      },
+      {
+        "question": "Držitel individuálního oprávnění k využívání rádiových kmitočtů je povinen platit za využívání rádiových kmitočtů",
+        "options": [
+          "paušální poplatek",
+          "poplatek dle nařízení vlády o poplatcích",
+          "daň z přidané hodnoty",
+          "správní poplatek"
+        ],
+        "answer": "poplatek dle nařízení vlády o poplatcích"
+      },
+      {
+        "question": "Rádiovým spektrem se rozumí elektromagnetické vlny o kmitočtu (frekvenci)",
+        "options": [
+          "nižším než 3 000 GHz",
+          "vyšším než 3 000 GHz",
+          "od 10 Hz do 1 000 GHz",
+          "v pásmech mikrovln"
+        ],
+        "answer": "nižším než 3 000 GHz"
+      },
+      {
+        "question": "Státní kontrolu elektronických komunikací vykonává",
+        "options": [
+          "Český telekomunikační úřad",
+          "Ministerstvo průmyslu a obchodu",
+          "Rada ČTÚ",
+          "Parlament ČR"
+        ],
+        "answer": "Český telekomunikační úřad"
+      },
+      {
+        "question": "Fyzická osoba vykonávající obsluhu vysílacího rádiového zařízení bez platného průkazu odborné způsobilosti se dopustila",
+        "options": [
+          "trestného činu",
+          "přestupku",
+          "nezákonného jednání",
+          "porušení mezinárodního práva"
+        ],
+        "answer": "přestupku"
+      },
+      {
+        "question": "Za obsluhu vysílacího rádiového zařízení bez platného průkazu odborné způsobilosti může Úřad uložit fyzické osobě pokutu až do výše",
+        "options": ["50 000 Kč", "100 000 Kč", "200 000 Kč", "500 000 Kč"],
+        "answer": "100 000 Kč"
+      },
+      {
+        "question": "V mezinárodní volací značce České republiky tvoří první dvě písmena (prefix) vždy dvojice písmen",
+        "options": ["OK nebo OL", "CZ nebo CR", "OL nebo OM", "CR nebo CZ"],
+        "answer": "OK nebo OL"
+      },
+      {
+        "question": "Mezinárodní volací značka lodní stanice u plavidel zapsaných v námořním rejstříku ČR je",
+        "options": [
+          "OL a další dvě písmena",
+          "OK a čtyři číslice",
+          "CZ nebo CR",
+          "OM nebo OL"
+        ],
+        "answer": "OL a další dvě písmena"
+      },
+      {
+        "question": "Volací značka OL5234 v radiotelefonním provozu je",
+        "options": [
+          "volací značka lodní stanice",
+          "volací značka letecké stanice",
+          "volací značka pobřežní stanice",
+          "volací značka amatérské stanice"
+        ],
+        "answer": "volací značka lodní stanice"
+      },
+      {
+        "question": "Co znamená zkratka GMDSS?",
+        "options": [
+          "Globální monitorovací a detekční systém",
+          "Generální monitorovací a bezpečnostní systém",
+          "Celosvětový námořní tísňový a bezpečnostní systém",
+          "Globální námořní záchranný systém"
+        ],
+        "answer": "Celosvětový námořní tísňový a bezpečnostní systém"
+      },
+      {
+        "question": "Je podle mezinárodního práva plavidlo povinné poskytnout pomoc jinému plavidlu v tísni?",
+        "options": [
+          "Ano, vždy",
+          "Ne, není to povinné",
+          "Ano, pokud tím nadměrně neohrozí svou loď nebo posádku",
+          "Ano, ale pouze v případě tísňového volání MAYDAY"
+        ],
+        "answer": "Ano, pokud tím nadměrně neohrozí svou loď nebo posádku"
+      },
+      {
+        "question": "Falešné volací značky a falešné signály",
+        "options": [
+          "se nesmí používat",
+          "jsou povoleny v tísni",
+          "mohou být použity pro výcvik",
+          "jsou regulovány místními zákony"
+        ],
+        "answer": "se nesmí používat"
+      },
+      {
+        "question": "Pohyblivá stanice námořní pohyblivé služby je",
+        "options": [
+          "lodní stanice",
+          "pobřežní stanice",
+          "letecká stanice",
+          "pohotovostní stanice"
+        ],
+        "answer": "lodní stanice"
+      },
+      {
+        "question": "Pohyblivá služba mezi pobřežními stanicemi a lodními stanicemi nebo mezi lodními stanicemi se nazývá",
+        "options": [
+          "námořní pohyblivá služba",
+          "pobřežní komunikační služba",
+          "lodní přenosová služba",
+          "mezinárodní rádiová služba"
+        ],
+        "answer": "námořní pohyblivá služba"
+      },
+      {
+        "question": "Pořadí zpráv podle důležitosti je následující:",
+        "options": [
+          "Bezpečnostní, tísňová, pilnostní",
+          "Pilnostní, tísňová, bezpečnostní",
+          "Tísňová, pilnostní, bezpečnostní",
+          "Tísňová, bezpečnostní, pilnostní"
+        ],
+        "answer": "Tísňová, pilnostní, bezpečnostní"
+      },
+      {
+        "question": "Nejvyšší prioritu a absolutní přednost má zpráva",
+        "options": [
+          "pilnostní (signál PAN PAN)",
+          "tísňová (signál MAYDAY)",
+          "bezpečnostní (signál SECURITE)",
+          "informativní (signál INFO)"
+        ],
+        "answer": "tísňová (signál MAYDAY)"
+      },
+      {
+        "question": "Tísňové volání a tísňová zpráva se vysílají jen na rozkaz",
+        "options": [
+          "velitele nebo osoby odpovědné za loď nebo letadlo",
+          "pobřežní stanice",
+          "vysílací stanice",
+          "kapitána přístavu"
+        ],
+        "answer": "velitele nebo osoby odpovědné za loď nebo letadlo"
+      },
+      {
+        "question": "Mezinárodní VKV (VHF) tísňový, bezpečnostní a volací kmitočet v radiotelefonii v námořní pohyblivé službě je",
+        "options": ["121,5 MHz", "156,8 MHz (kanál 16)", "406 MHz", "500 kHz"],
+        "answer": "156,8 MHz (kanál 16)"
+      },
+      {
+        "question": "Kanál 16 v pásmu VKV (VHF) je v námořní pohyblivé službě určen k",
+        "options": [
+          "běžné komunikaci mezi plavidly",
+          "tísňovému a pilnostnímu volání, upozornění na bezpečnostní volání a k navázání spojení",
+          "přenosu meteorologických informací",
+          "informacím o navigaci"
+        ],
+        "answer": "tísňovému a pilnostnímu volání, upozornění na bezpečnostní volání a k navázání spojení"
+      },
+      {
+        "question": "Rádiové kmitočty z pásma 160 MHz spadají do pásma označovaného jako",
+        "options": ["VKV (VHF)", "KV (HF)", "SV (MF)", "DV (LF)"],
+        "answer": "VKV (VHF)"
+      },
+      {
+        "question": "Pátrací a záchrannou operaci na moři může ukončit",
+        "options": [
+          "kapitán lodi",
+          "velitel (řídící stanice) pátrací a záchranné operace",
+          "pobřežní stanice",
+          "místní úřad"
+        ],
+        "answer": "velitel (řídící stanice) pátrací a záchranné operace"
+      },
+      {
+        "question": "Pohyblivým stanicím na moři nebo nad mořem je zakázáno provozovat",
+        "options": [
+          "televizní vysílání",
+          "rozhlasovou službu",
+          "internetové služby",
+          "pobřežní komunikaci"
+        ],
+        "answer": "rozhlasovou službu"
+      },
+      {
+        "question": "Služba u letadlové nebo lodní stanice podléhá nejvyšší pravomoci",
+        "options": [
+          "kapitána přístavu",
+          "velitele nebo osoby, která je odpovědná za letadlo nebo plavidlo",
+          "posádky stanice",
+          "pobřežní komunikace"
+        ],
+        "answer": "velitele nebo osoby, která je odpovědná za letadlo nebo plavidlo"
+      },
+      {
+        "question": "Doba platnosti průkazů operátorů námořní pohyblivé služby LRC a SRC je při prvním vydání stanovena na",
+        "options": ["5 let", "10 let", "15 let", "20 let"],
+        "answer": "10 let"
+      }
+    ]
+  }
+]

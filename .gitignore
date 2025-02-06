@@ -1,0 +1,48 @@
+# Python bytecode files
+__pycache__/
+*.py[cod]
+
+# Flask instance folder (for app instance-specific files)
+instance/
+
+# Environment variables
+.env
+
+# VS Code settings folder
+.vscode/
+
+# MacOS Finder metadata
+.DS_Store
+
+# Windows system files
+Thumbs.db
+
+# Log files
+*.log
+
+# Flask migrations folder (if using Flask-Migrate)
+migrations/
+
+# Virtual Environment folder
+venv/
+env/
+*.venv/
+
+# Node modules (if using npm for frontend dependencies)
+node_modules/
+
+# Dependency directories
+*.egg-info/
+dist/
+build/
+
+# Temporary files
+*.bak
+*.swp
+
+# AWS Elastic Beanstalk deployment files
+.elasticbeanstalk/
+
+# S3 Bucket files
+static/
+questions.txt

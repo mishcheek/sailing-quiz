@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Results</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body class="{{ 'result-page' if result_page else '' }}">
+    <div class="container">
+      <h1>Quiz Completed</h1>
+      <p class="score">Your Score: {{ score }} / {{ total }}</p>
+
+      <h2>Question Summary:</h2>
+      <ul>
+        {% for answer in session['answers'] %}
+        <li>
+          <strong>Question:</strong> {{ answer['question'] }}<br />
+          <strong>Your Answer:</strong> {{ answer['selected_answer'] }}<br />
+          <strong>Correct Answer:</strong> {{ answer['correct_answer'] }}<br />
+          <strong>Status:</strong>
+          {% if answer['is_correct'] %}
+          <span style="color: green">Correct</span>
+          {% else %}
+          <span style="color: red">Incorrect</span>
+          {% endif %}
+        </li>
+        <hr />
+        {% endfor %}
+      </ul>
+
+      <a href="{{ url_for('index') }}"><button>Restart Quiz</button></a>
+    </div>
+  </body>
+</html>
