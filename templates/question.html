@@ -14,7 +14,7 @@
       <h2>Question {{ index }} of {{ total }}</h2>
       <form method="post">
         <div class="question-container">
-          <div class="question">{{ question['question'] }}</div>
+          <h2 class="question">{{ question['question'] }}</h2>
           <div class="options">
             {% set labels = ['A', 'B', 'C', 'D'] %} {% for option in
             question['options'] %}
