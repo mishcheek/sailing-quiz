@@ -43,6 +43,6 @@ build/
 # AWS Elastic Beanstalk deployment files
 .elasticbeanstalk/
 
-# S3 Bucket files
-static/
 questions.txt
+simpleserver.pem
+ssh_command.txt

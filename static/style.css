@@ -1,0 +1,159 @@
+/* Global Styles */
+body {
+  font-family: "Helvetica", Arial, sans-serif;
+  background-color: #f0f8ff; /* Soft light blue */
+  color: #2c3e50; /* Dark navy text */
+  padding: 0 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+body.result-page {
+  margin-top: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+}
+
+h1,
+h2 {
+  font-family: "Georgia", serif;
+  color: #1e3d58; /* Deep navy for headings */
+}
+
+.container {
+  background-color: #ffffff; /* White background for content */
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Buttons */
+button {
+  background-color: #1e6c92; /* Soft navy blue */
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #154d6f; /* Darker shade of blue */
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #f0f8ff; /* Soft highlight on focus */
+}
+
+/* Score and Question Summary */
+.score {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  font-size: 1rem;
+  padding: 0.8rem;
+  margin: 1rem 0;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05); /* Light shadow */
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #e1e1e1;
+}
+
+/* Correct/Incorrect Status */
+span {
+  font-weight: bold;
+}
+
+span.correct {
+  color: #27ae60; /* Green for correct */
+}
+
+span.incorrect {
+  color: #e74c3c; /* Red for incorrect */
+}
+
+/* Navigation Links */
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #3498db;
+}
+
+.question-container {
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.question {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center; /* Center the question text */
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the options horizontally */
+  justify-content: center; /* Center the options vertically */
+  gap: 10px; /* Space between each option */
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Align the radio button and text to center */
+  width: 100%; /* Ensure the option fills the available space */
+  padding: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.option:hover {
+  background-color: #e0e0e0; /* Light hover effect */
+}
+
+input[type="radio"] {
+  margin-right: 10px; /* Space between radio button and text */
+  cursor: pointer;
+}
+
+label {
+  cursor: pointer; /* Make the label clickable */
+  display: block;
+  user-select: none; /* Prevent text selection while clicking */
+  text-align: center; /* Center the text inside the label */
+}
