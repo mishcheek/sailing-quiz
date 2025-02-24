@@ -12,7 +12,7 @@ def load_questions():
 
 questions_data = load_questions()
 all_questions = [q for category in questions_data for q in category["questions"]]
-QUESTION_LIMIT = 10  # Limit to 15 questions per session
+QUESTION_LIMIT = 15  # Limit to 15 questions per session
 
 @app.route("/")
 def index():
@@ -27,32 +27,69 @@ def quiz():
     if "questions" not in session or session["question_index"] >= len(session["questions"]):
         return redirect(url_for("result"))
 
+    current_question = session["questions"][session["question_index"]]
+    
     if request.method == "POST":
         selected_answer = request.form.get("answer")
-        correct_answer = session["questions"][session["question_index"]]["answer"]
+        correct_answer = current_question["answer"]
+        is_correct = selected_answer == correct_answer
 
-        # Store the answer in session to use in results
         if "answers" not in session:
             session["answers"] = []
         session["answers"].append({
-            "question": session["questions"][session["question_index"]]["question"],
+            "question": current_question["question"],
             "selected_answer": selected_answer,
             "correct_answer": correct_answer,
-            "is_correct": selected_answer == correct_answer
+            "is_correct": is_correct
         })
 
-        if selected_answer == correct_answer:
+        if is_correct:
             session["score"] += 1
+        session.modified = True
 
+        # Show evaluation for the current question
+        return render_template(
+            "question.html",
+            question=current_question,
+            index=session["question_index"] + 1,
+            total=QUESTION_LIMIT,
+            show_evaluation=True,
+            selected_answer=selected_answer,
+            correct_answer=correct_answer,
+            is_correct=is_correct,
+            options=current_question["options"]
+        )
+
+    # Handle next question
+    if request.args.get('next'):
         session["question_index"] += 1
-
-        if session["question_index"] >= QUESTION_LIMIT:
+        session.modified = True
+        
+        if session["question_index"] >= len(session["questions"]):
             return redirect(url_for("result"))
+            
+        # Get the new current question
+        current_question = session["questions"][session["question_index"]]
+        
+        # Show the new question without evaluation
+        return render_template(
+            "question.html",
+            question=current_question,
+            index=session["question_index"] + 1,
+            total=QUESTION_LIMIT,
+            show_evaluation=False,
+            options=current_question["options"]
+        )
 
-        return redirect(url_for("quiz"))
-
-    question = session["questions"][session["question_index"]]
-    return render_template("question.html", question=question, index=session["question_index"] + 1, total=QUESTION_LIMIT)
+    # Initial question display
+    return render_template(
+        "question.html",
+        question=current_question,
+        index=session["question_index"] + 1,
+        total=QUESTION_LIMIT,
+        show_evaluation=False,
+        options=current_question["options"]
+    )
 
 @app.route('/result', methods=['GET', 'POST'])
 def result():
