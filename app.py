@@ -12,22 +12,22 @@ def load_questions():
 
 questions_data = load_questions()
 all_questions = [q for category in questions_data for q in category["questions"]]
-QUESTION_LIMIT = 15  # Limit to 15 questions per session
 
 @app.route("/")
 def index():
     session.clear()
     session["score"] = 0
     session["question_index"] = 0
-    session["questions"] = random.sample(all_questions, min(QUESTION_LIMIT, len(all_questions)))  # Limit to 15
+    session["questions"] = all_questions  # Use all questions instead of random sample
     return render_template("index.html")
 
 @app.route("/quiz", methods=["GET", "POST"])
 def quiz():
-    if "questions" not in session or session["question_index"] >= len(session["questions"]):
-        return redirect(url_for("result"))
+    if "questions" not in session:
+        return redirect(url_for("index"))
 
-    current_question = session["questions"][session["question_index"]]
+    # Get current question using modulo to cycle through questions
+    current_question = session["questions"][session["question_index"] % len(session["questions"])]
     
     if request.method == "POST":
         selected_answer = request.form.get("answer")
@@ -51,8 +51,6 @@ def quiz():
         return render_template(
             "question.html",
             question=current_question,
-            index=session["question_index"] + 1,
-            total=QUESTION_LIMIT,
             show_evaluation=True,
             selected_answer=selected_answer,
             correct_answer=correct_answer,
@@ -65,18 +63,13 @@ def quiz():
         session["question_index"] += 1
         session.modified = True
         
-        if session["question_index"] >= len(session["questions"]):
-            return redirect(url_for("result"))
-            
-        # Get the new current question
-        current_question = session["questions"][session["question_index"]]
+        # Get the new current question using modulo
+        current_question = session["questions"][session["question_index"] % len(session["questions"])]
         
         # Show the new question without evaluation
         return render_template(
             "question.html",
             question=current_question,
-            index=session["question_index"] + 1,
-            total=QUESTION_LIMIT,
             show_evaluation=False,
             options=current_question["options"]
         )
@@ -85,8 +78,6 @@ def quiz():
     return render_template(
         "question.html",
         question=current_question,
-        index=session["question_index"] + 1,
-        total=QUESTION_LIMIT,
         show_evaluation=False,
         options=current_question["options"]
     )
@@ -94,7 +85,7 @@ def quiz():
 @app.route('/result', methods=['GET', 'POST'])
 def result():
     score = session.get("score", 0)
-    total = QUESTION_LIMIT
+    total = session.get("question_index", 0)  # Use actual number of questions answered
     return render_template('result.html', score=score, total=total, result_page=True)
 if __name__ == "__main__":
     app.run(debug=True)

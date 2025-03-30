@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Question {{ index }} of {{ total }}</title>
+    <title>Question</title>
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='style.css') }}"
@@ -41,7 +41,6 @@
   </head>
   <body>
     <div class="container">
-      <h2>Question {{ index }} of {{ total }}</h2>
       <div class="question-container">
         <h2 class="question">{{ question['question'] }}</h2>
         {% if show_evaluation %}
@@ -67,10 +66,7 @@
         </div>
         <form method="get">
           <input type="hidden" name="next" value="1" />
-          <button type="submit">
-            {% if index == total %} Evaluation {% else %} Next Question {% endif
-            %}
-          </button>
+          <button type="submit">Next Question</button>
         </form>
         {% else %}
         <form method="post">
